@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores cambuiantes</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <section>
+        <div class="bg">ROJO</div>
+        <select class="SelecionColor" onchange="cambiarColor(this)">
+            <option value="#ff2323">Rojo</option>
+            <option value="#66ff00">Verde</option>
+            <option value="#9b1fe8">Purpura</option>
+            <option value="#ffff12">Amarillo</option>
+            <option value="#ff69b4">Rosa</option>
+
+        </select>
+    </section>
+<script>
+    function cambiarColor(getColor){
+        let bg = document.querySelector('.bg');
+        let SelecionColor = getColor.value;
+        let texto = getColor.options[getColor.selectedIndex].text;
+        bg.style.background = SelecionColor;
+        bg.innerHTML = texto;
+
+    }
+</script>
+    
+</body>
+</html>
